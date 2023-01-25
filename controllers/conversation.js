@@ -4,7 +4,7 @@ const { Conversation} = require('../db');
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey:"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",
+  apiKey:process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -17,7 +17,7 @@ module.exports = {
 const completion = await openai.createCompletion({
   model: model,
   prompt: prompt,
-  temperature: 0,
+  temperature: 0.6,
   max_tokens: 300,
 });
 
