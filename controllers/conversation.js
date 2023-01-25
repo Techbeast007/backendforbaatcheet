@@ -20,7 +20,7 @@ const completion = await openai.createCompletion({
   temperature: 0,
   max_tokens: 300,
 });
-console.log(completion.data.choices[0])
+
 
     //   const completion = await openai.completions.create({
     //     engine: model,
