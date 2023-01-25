@@ -4,7 +4,7 @@ const { Conversation} = require('../db');
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey:process.env.OPENAI_API_KEY,
+  apiKey:"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",
 });
 const openai = new OpenAIApi(configuration);
 
