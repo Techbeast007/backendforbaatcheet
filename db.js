@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
+mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://navneet:navneet@cluster0.dhn6oi5.mongodb.net/test', { useNewUrlParser: true });
+
 
 // Define the conversation schema
 const conversationSchema = new mongoose.Schema({
